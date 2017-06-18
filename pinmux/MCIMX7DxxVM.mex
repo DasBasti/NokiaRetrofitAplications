@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding= "UTF-8" ?>
+<configuration name="MCIMX7DxxVM" version="1.1" xsi:schemaLocation="http://kex.nxp.com/XSD/mex_configuration_1.1 http://kex.nxp.com/XSD/mex_configuration_1.1.xsd" uuid="99624575-7a88-4258-8229-90ef15a5da0d" xmlns="http://kex.nxp.com/XSD/mex_configuration_1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <common>
+      <processor>MCIMX7DxxVM</processor>
+      <package>MCIMX7D7DVM10SC</package>
+      <mcu_data>i_mx_1_0</mcu_data>
+      <cores>
+         <core name="Core #1 (ARM Cortex-A7)" id="core1" description="ARM core #1"/>
+         <core name="Core #2 (ARM Cortex-A7)" id="core2" description="ARM core #2"/>
+         <core name="Core #3 (ARM Cortex-M4)" id="core3" description="ARM core #3"/>
+      </cores>
+      <description></description>
+   </common>
+   <tools>
+      <pins name="Pins" version="2.0">
+         <pins_profile>
+            <processor_version>N/A</processor_version>
+         </pins_profile>
+         <functions_list>
+            <function name="BOARD_InitPins">
+               <description>Configures pin routing and optionally pin electrical features.&amp;lt;br/&amp;gt;</description>
+               <options>
+                  <coreID>singlecore</coreID>
+               </options>
+               <pins/>
+            </function>
+         </functions_list>
+      </pins>
+   </tools>
+</configuration>

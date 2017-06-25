@@ -14,6 +14,8 @@ In addition to the required packages given by the android source.android.com/sou
 	$ sudo apt install mtd-utils
 	$ sudo apt install android-tools-fsutils
 	$ sudo apt install openjdk-8-jdk
+	$ sudo apt install python-lunch
+
 
 ## Get build environment
 
@@ -38,4 +40,22 @@ Cloning into the imx Kernel will take some time as well
 	$ cd uboot-imx
 	$ git checkout n7.1.1_1.0.0-ga
 
+After getting the sources we can patch the needed code changes for running Android on the i.MX7D platform
 
+	$ cd ..
+	$ source [wherever you downloaded the NXP android sources to]/android_N7.1.1_1.0.0_source/code/N7.1.1_1.0.0/and_patch.sh
+	$ c_patch [wherever you downloaded the NXP android sources to]/android_N7.1.1_1.0.0_source/code/N7.1.1_1.0.0/ imx_N7.1.1_1.0.0
+
+This will run over the repositories and change stuff where change is needed. This will take a while
+
+	*************************************************************
+	Success: Now you can build android code for FSL i.MX platform
+	*************************************************************
+
+This message shows you that all patches are applied and we can start building Android.
+
+	$ source build/envsetup.sh
+	$ lunch
+	$ make 2>&1 | tee build-log.txt
+
+Building Android will take a lot of time. Really a lot of time. 

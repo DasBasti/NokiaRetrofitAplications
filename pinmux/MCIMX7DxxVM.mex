@@ -3,6 +3,7 @@
    <common>
       <processor>MCIMX7DxxVM</processor>
       <package>MCIMX7D7DVM10SC</package>
+      <board></board>
       <mcu_data>i_mx_1_0</mcu_data>
       <cores>
          <core name="Core #1 (ARM Cortex-A7)" id="core1" description="ARM core #1"/>
@@ -14,15 +15,21 @@
    <tools>
       <pins name="Pins" version="2.0">
          <pins_profile>
-            <processor_version>N/A</processor_version>
+            <processor_version>1.1.1</processor_version>
+            <power_domains/>
          </pins_profile>
          <functions_list>
             <function name="BOARD_InitPins">
                <description>Configures pin routing and optionally pin electrical features.&amp;lt;br/&amp;gt;</description>
                <options>
-                  <coreID>singlecore</coreID>
+                  <coreID>core1</coreID>
                </options>
-               <pins/>
+               <pins>
+                  <pin peripheral="GPIO2" signal="gpio_io, 21" pin_num="G24" pin_signal="EPDC1_SDCE1"/>
+                  <pin peripheral="GPIO2" signal="gpio_io, 20" pin_num="G25" pin_signal="EPDC1_SDCE0"/>
+                  <pin peripheral="GPIO2" signal="gpio_io, 22" pin_num="H23" pin_signal="EPDC1_SDCE2"/>
+                  <pin peripheral="GPIO2" signal="gpio_io, 23" pin_num="H22" pin_signal="EPDC1_SDCE3"/>
+               </pins>
             </function>
          </functions_list>
       </pins>

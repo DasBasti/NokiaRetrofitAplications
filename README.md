@@ -59,3 +59,7 @@ This message shows you that all patches are applied and we can start building An
 	$ make 2>&1 | tee build-log.txt
 
 Building Android will take a lot of time. Really a lot of time. 
+
+## After building the Android source we start modifying it
+
+First we need to put in the changes we made. Therefor we need to download the devices found in https://github.com/DasBasti/Android-Devices
